@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- CRT K - phosphor glow, no scanlines -->
+  <defs>
+    <filter id="crt-glow">
+      <feGaussianBlur stdDeviation="0.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="32" height="32" fill="#1a1a24"/>
+  
+  <!-- Glow layer underneath -->
+  <text x="16" y="23" 
+        font-family="Arial, sans-serif" 
+        font-size="22" 
+        font-weight="bold" 
+        fill="#a78bfa"
+        text-anchor="middle"
+        filter="url(#crt-glow)">K</text>
+  
+  <!-- Sharp K on top -->
+  <text x="16" y="23" 
+        font-family="Arial, sans-serif" 
+        font-size="22" 
+        font-weight="bold" 
+        fill="#b39ddb"
+        text-anchor="middle">K</text>
+</svg>
